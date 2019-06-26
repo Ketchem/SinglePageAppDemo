@@ -1,5 +1,4 @@
-var express = require("express"), 
-    scrollMonitor = require("scrollmonitor");
+var express = require("express");
 var app = express();
 
 
