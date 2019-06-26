@@ -1,5 +1,21 @@
 
 $(document).ready(function() {
+
+    // Add listener for slide 3
+    // ------------------------------------------------------
+    var myElement = document.getElementById("slide3");
+
+    var elementWatcher = scrollMonitor.create( myElement );
+
+    elementWatcher.enterViewport(function() {
+        alert( 'I have entered the viewport' );
+    });
+    elementWatcher.exitViewport(function() {
+        alert( 'I have left the viewport' );
+    });
+    // ------------------------------------------------------
+
+    // Create slide transisitons clicking the navbar
     $('a[href*=\\#]').each(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname
@@ -19,3 +35,4 @@ $(document).ready(function() {
     });
 
 });
+
